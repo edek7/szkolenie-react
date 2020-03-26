@@ -12,10 +12,11 @@ import {
     MyFunctionComponent2,
     MyFunctionComponent3
 } from "./components/typesOfComponents/MyFunctionComponent";
+import {List} from "./components/task1/List";
 
 const rootEl = document.getElementById("root");
 
 render(
-    <MyFunctionComponent3 surname={'Jaro'} name={'Edwin'} age={25}/>,
+    <List />,
     rootEl,
 );
