@@ -13,10 +13,11 @@ import {
     MyFunctionComponent3
 } from "./components/typesOfComponents/MyFunctionComponent";
 import {List} from "./components/task1/List";
+import {StatefulComponent} from "./components/hooks/StatefulComponent";
 
 const rootEl = document.getElementById("root");
 
 render(
-    <List />,
+    <StatefulComponent />,
     rootEl,
 );
