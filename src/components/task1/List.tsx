@@ -9,7 +9,7 @@ export const List = () => {
 
     const [list, setList] = useState([]);
     const [searchPhrase, setSearchPhrase] = useState<string>("");
-    const [region, setRegion] = useState<string>("");
+    const [region, setRegion] = useState<string>(undefined);
 
     useEffect(() => {
         axios.get("https://restcountries-v1.p.rapidapi.com/all", {
@@ -25,7 +25,7 @@ export const List = () => {
         <RegionFilterComponent regions={new Set(list.map(value => value.region))} setRegion={setRegion}/>
         {list
             .filter(country => country.name.startsWith(searchPhrase))
-            .filter(country => country.region === region)
+            .filter(country => !region || country.region === region)
             .map(country => {
                 return <ListElement name={country.name}/>
             })}
