@@ -11,7 +11,6 @@ export const Checkbox: FunctionComponent<{}> = ({}) => {
 
     return (
         <>
-            <div>"label"</div>
             <input type={"checkbox"}
                    checked={value}
                    onChange={() => setValue(!value)}/>
